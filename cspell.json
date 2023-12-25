@@ -1,0 +1,18 @@
+{
+  "language": "en",
+  "allowCompoundWords": true,
+  "words": ["reduxjs"],
+  "ignorePaths": [
+    "node_modules",
+    ".prettierrc",
+    "**.log",
+    "**.json",
+    "**.cnf",
+    "**.lock",
+    ".vscode/**",
+    ".gitignore",
+    "src/config/api/node",
+    "tsconfig.tsbuildinfo",
+    "Makefile"
+  ]
+}
