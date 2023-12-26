@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint --no-error-on-unmatched-pattern --max-warnings=0 ./src",
+    "tsc": "tsc --noEmit",
     "preview": "vite preview",
     "prepare": "husky install"
   },
