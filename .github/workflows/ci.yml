@@ -25,14 +25,15 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 18.x
 
       - name: Install Dependencies
         run: |
-          yarn --frozen-lockfile --prefer-offline
+          corepack enable
+          yarn install
 
-      - name: Run Lint
+      - name: Lint
         run: yarn lint
 
-      - name: Run tsc check
+      - name: TSC
         run: yarn tsc
