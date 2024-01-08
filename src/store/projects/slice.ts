@@ -2,18 +2,16 @@ import { ActionReducerMapBuilder } from "@reduxjs/toolkit";
 import { createSlice } from "@reduxjs/toolkit";
 import { APIError } from "../../config/api/axios";
 import { createProject, findProject, getProjects, updateProject } from "./api";
-import { ProjectStatus, SliceName, StateStatus } from "./type";
+import { SliceName, StateStatus } from "./type";
 
 export type Project = {
   id: string;
   name: string;
-  status: string;
 };
 
 const initialProject: Project = {
   id: "",
   name: "",
-  status: ProjectStatus.active,
 };
 
 type ProjectState<T> = {
