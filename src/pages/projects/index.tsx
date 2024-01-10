@@ -14,7 +14,7 @@ const ProjectList: FC = () => {
   return (
     <div>
       <Heading1 text="Hello World" />
-      <a href="#">click me</a>
+      <button>Click me</button>
     </div>
   );
 };
