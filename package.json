@@ -11,7 +11,8 @@
     "preview": "vite preview",
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_9c00893ac46cf45"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.0.1",
@@ -25,17 +26,19 @@
     "@storybook/addon-essentials": "^7.6.7",
     "@storybook/addon-interactions": "^7.6.7",
     "@storybook/addon-links": "^7.6.7",
-    "@storybook/addon-mdx-gfm": "^7.6.7",
     "@storybook/blocks": "^7.6.7",
+    "@storybook/jest": "^0.2.3",
     "@storybook/react": "^7.6.7",
     "@storybook/react-vite": "^7.6.7",
     "@storybook/test": "^7.6.7",
+    "@storybook/testing-library": "^0.2.2",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
     "@typescript-eslint/eslint-plugin": "^6.14.0",
     "@typescript-eslint/parser": "^6.14.0",
     "@vitejs/plugin-react": "^4.2.1",
+    "chromatic": "^10.2.0",
     "cspell": "^8.2.3",
     "eslint": "^8.55.0",
     "eslint-plugin-import": "^2.29.1",
@@ -50,5 +53,7 @@
     "typescript": "^5.2.2",
     "vite": "^5.0.8"
   },
-  "packageManager": "yarn@4.0.2"
+  "packageManager": "yarn@4.0.2",
+  "readme": "ERROR: No README data found!",
+  "_id": "app@0.0.0"
 }

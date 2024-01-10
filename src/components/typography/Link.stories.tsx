@@ -1,3 +1,4 @@
+import { BrowserRouter } from "react-router-dom";
 import type { Meta, StoryObj } from "@storybook/react";
 import Link, { LinkProps } from "./link";
 
@@ -14,6 +15,13 @@ const DefaultArgs: LinkProps = {
   text: "Hello World",
 };
 
-export const H2: Story = {
+export const LinkText: Story = {
   args: DefaultArgs,
+  decorators: [
+    (Story) => (
+      <BrowserRouter>
+        <Story />
+      </BrowserRouter>
+    ),
+  ],
 };

@@ -13,15 +13,8 @@ const ProjectList: FC = () => {
 
   return (
     <div>
-      <Heading1 text="Project List" />
-      <Link href={`/${ProjectPageKey.ROOT}/${ProjectPageKey.NEW}`} text={"New Project"} />
-      <div>
-        {projectsState.data.map((project) => (
-          <div key={project.id}>
-            <Link href={`/${ProjectPageKey.ROOT}/${project.id}/${ProjectPageKey.EDIT}`} text={project.name} />
-          </div>
-        ))}
-      </div>
+      <Heading1 text="Hello World" />
+      <button>Click me</button>
     </div>
   );
 };

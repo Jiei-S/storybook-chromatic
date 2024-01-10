@@ -10,19 +10,19 @@ const mockProjects: Project[] = [...Array(3)].map((_, i) => ({
 }));
 
 export default [
-  http.get(`${API_BASE_URL}/projects`, () => {
+  http.get(`/projects`, () => {
     return HttpResponse.json(mockProjects);
   }),
-  http.get(`${API_BASE_URL}/projects/:id`, ({ params }) => {
+  http.get(`/projects/:id`, ({ params }) => {
     const { id } = params;
     const project = mockProjects.find((p) => p.id === id);
     return HttpResponse.json(project);
   }),
-  http.post(`${API_BASE_URL}/projects`, async ({ request }) => {
+  http.post(`/projects`, async ({ request }) => {
     const newProject = await request.json();
     return HttpResponse.json(newProject);
   }),
-  http.put(`${API_BASE_URL}/projects/:id`, async ({ request }) => {
+  http.put(`/projects/:id`, async ({ request }) => {
     const newProject = await request.json();
     return HttpResponse.json(newProject);
   }),
