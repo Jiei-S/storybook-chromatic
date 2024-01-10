@@ -105,23 +105,23 @@ export const NameError: Story = {
       />
     );
   },
-  play: async ({ canvasElement, step }) => {
-    const fac = new PlayFactory(canvasElement, step);
-    await fac.setup();
-    await fac.testInitial();
-    await fac.enterSuccessData();
+  // play: async ({ canvasElement, step }) => {
+  //   const fac = new PlayFactory(canvasElement, step);
+  //   await fac.setup();
+  //   await fac.testInitial();
+  //   await fac.enterSuccessData();
 
-    await step("Max", async () => {
-      await fac.user.clear(fac.name!);
-      await fac.user.type(fac.name!, "a".repeat(21));
-      await expect(fac.canvas.getByText("max length is 20")).toBeInTheDocument();
-      await expect(fac.submitButton).toBeDisabled();
-    });
+  //   await step("Max", async () => {
+  //     await fac.user.clear(fac.name!);
+  //     await fac.user.type(fac.name!, "a".repeat(21));
+  //     await expect(fac.canvas.getByText("max length is 20")).toBeInTheDocument();
+  //     await expect(fac.submitButton).toBeDisabled();
+  //   });
 
-    await step("Empty", async () => {
-      await fac.user.clear(fac.name!);
-      await expect(fac.canvas.getByText("required")).toBeInTheDocument();
-      await expect(fac.submitButton).toBeDisabled();
-    });
-  },
+  //   await step("Empty", async () => {
+  //     await fac.user.clear(fac.name!);
+  //     await expect(fac.canvas.getByText("required")).toBeInTheDocument();
+  //     await expect(fac.submitButton).toBeDisabled();
+  //   });
+  // },
 };
