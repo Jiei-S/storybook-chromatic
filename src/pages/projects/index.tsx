@@ -18,6 +18,9 @@ const ProjectList: FC = () => {
       <div>
         {projectsState.data.map((project) => (
           <div key={project.id}>
+            <div>Detail</div>
+            <Link href={`/${ProjectPageKey.ROOT}/${project.id}`} text={project.name} />
+            <div>Edit</div>
             <Link href={`/${ProjectPageKey.ROOT}/${project.id}/${ProjectPageKey.EDIT}`} text={project.name} />
           </div>
         ))}
