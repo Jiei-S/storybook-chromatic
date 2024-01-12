@@ -14,7 +14,7 @@ on:
       - yarn.lock
 
 jobs:
-  test:
+  build:
     if: ${{ !github.event.pull_request.draft }}
     runs-on: ubuntu-latest
 
