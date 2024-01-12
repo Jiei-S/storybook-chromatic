@@ -11,6 +11,7 @@ export type FormProps = {
 
 const Form: FC<FormProps> = ({ disabled, label, value, error, onChange, onSubmit }) => (
   <form>
+    <label htmlFor={label}>{label}</label>
     <input type="text" value={value} onChange={onChange} aria-label={label} />
     <div style={{ color: "red" }}>{error}</div>
     <button disabled={disabled} type="submit" onClick={onSubmit}>
