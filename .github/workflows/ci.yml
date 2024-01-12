@@ -37,3 +37,8 @@ jobs:
 
       - name: TSC
         run: yarn tsc
+
+      - name: Chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
