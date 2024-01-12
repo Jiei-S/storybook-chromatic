@@ -1,14 +1,14 @@
 import { FC, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Form from "../../component/form";
-import Heading1 from "../../component/typography/h1";
-import Loading from "../../component/typography/loading";
-import Submitting from "../../component/typography/submitting";
+import Form from "../../components/form";
+import Heading1 from "../../components/typography/h1";
+import Loading from "../../components/typography/loading";
+import Submitting from "../../components/typography/submitting";
 import { ProjectPageKey } from "../../const/page";
-import useProjectForm from "../../hook/projects/form";
+import useProjectForm from "../../hooks/projects/form";
 import useProjectStore from "../../store/projects/store";
 
-const Edit: FC = () => {
+const ProjectEdit: FC = () => {
   const { id } = useParams<{ id: string }>();
   const { isLoading, isLoaded, isSubmitting, dispatchFindProject } = useProjectStore();
   const form = useProjectForm(ProjectPageKey.EDIT);
@@ -32,4 +32,4 @@ const Edit: FC = () => {
   );
 };
 
-export default Edit;
+export default ProjectEdit;

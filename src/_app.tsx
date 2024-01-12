@@ -1,8 +1,8 @@
 import { Provider as ReduxProvider } from "react-redux";
 import { createBrowserRouter, RouterProvider, redirect } from "react-router-dom";
-import Layout from "./component/layouts";
-import Home from "./page";
-import projectsRouter from "./page/projects/routes";
+import Layout from "./components/layouts";
+import Home from "./pages";
+import projectsRouter from "./pages/projects/routes";
 import store from "./store";
 
 const router = createBrowserRouter([

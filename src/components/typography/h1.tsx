@@ -1,10 +1,10 @@
 import { FC } from "react";
 
-type Props = {
+export type Heading1Props = {
   text: string;
 };
 
-const Heading1: FC<Props> = ({ text }) => {
+const Heading1: FC<Heading1Props> = ({ text }) => {
   return <h1>{text}</h1>;
 };
 

@@ -1,12 +1,12 @@
 import { FC } from "react";
-import Form from "../../component/form";
-import Heading1 from "../../component/typography/h1";
-import Submitting from "../../component/typography/submitting";
+import Form from "../../components/form";
+import Heading1 from "../../components/typography/h1";
+import Submitting from "../../components/typography/submitting";
 import { ProjectPageKey } from "../../const/page";
-import useProjectForm from "../../hook/projects/form";
+import useProjectForm from "../../hooks/projects/form";
 import useProjectStore from "../../store/projects/store";
 
-const New: FC = () => {
+const ProjectNew: FC = () => {
   const { isSubmitting } = useProjectStore();
   const form = useProjectForm(ProjectPageKey.NEW);
 
@@ -18,4 +18,4 @@ const New: FC = () => {
   );
 };
 
-export default New;
+export default ProjectNew;

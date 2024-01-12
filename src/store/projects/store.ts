@@ -16,11 +16,8 @@ const useProjectStore = () => {
     () => projectState.status === StateStatus.loading || projectsState.status === StateStatus.loading,
     [projectState.status, projectsState.status]
   );
-
   const isSubmitting = useMemo(() => projectState.status === StateStatus.submitting, [projectState.status]);
-
   const isLoaded = useMemo(() => projectState.status === StateStatus.loaded, [projectState.status]);
-
   const isSucceeded = useMemo(() => projectState.status === StateStatus.success, [projectState.status]);
 
   const dispatchFindProject = useCallback(

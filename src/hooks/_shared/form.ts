@@ -1,9 +1,4 @@
-import { useEffect, useState } from "react";
-
-export enum FormInputType {
-  TEXT = "text",
-  SELECT = "select",
-}
+import { useEffect, useState, ChangeEvent } from "react";
 
 export type FormValidator = (value: string) => string;
 
@@ -14,13 +9,14 @@ export const useInput = (
   {
     value: string;
     error: string;
-    onChange: (value: string) => void;
+    onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   },
   () => void,
 ] => {
   const [value, setValue] = useState(initialValue);
   const [error, setError] = useState<string>("");
-  const onChange = (v: string) => {
+  const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const v = e.target.value;
     setError(validator(v));
     setValue(v);
   };
