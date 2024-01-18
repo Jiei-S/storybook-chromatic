@@ -1,7 +1,10 @@
 {
   "language": "en",
   "allowCompoundWords": true,
-  "words": ["reduxjs"],
+  "words": [
+    "reduxjs",
+    "Qiita"
+  ],
   "ignorePaths": [
     "node_modules",
     ".prettierrc",

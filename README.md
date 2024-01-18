@@ -3,6 +3,8 @@
 This is a sample project for VRT & Interaction Test with Chromatic/Storybook.  
 Automatically run Chromatic's automation whenever you open a pull request.  
 
+For more information, see [Qiita](https://qiita.com/Jiei-S/items/14a0f8d42e1f5c872ab7)
+
 # How To Run Storybook
 
 ```bash
